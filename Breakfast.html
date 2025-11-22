@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DineLUXe — Breakfast Menu</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #fffaf5;
+        color: #222;
+    }
+    header {
+        text-align: center;
+        padding: 25px;
+        background: #036579;;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        color: gold;
+        max-width: 1150px; margin: 40px auto; padding: 0 20px;
+    }
+    header h1 { margin: 0; font-size: 32px; font-weight: 700; padding-top: 30px; }
+
+    .container { max-width: 1150px; margin: 40px auto; padding: 0 20px; }
+
+    /* Category title */
+    .section-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        border-left: 5px solid #c79a63;
+        padding-left: 12px;
+    }
+
+    /* Grid */
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+
+    /* Cards */
+    .item-card {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 18px;
+        transition: 0.2s;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .item-card:hover { transform: translateY(-4px); }
+
+    .item-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 14px;
+        margin-bottom: 15px;
+    }
+
+    .item-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .desc {
+        margin: 0 0 10px;
+        color: #777;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    .btn-order {
+        background: #c79a63;
+        color: #fff;
+        border: none;
+        width: 100%;
+        padding: 12px;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .btn-order:hover { background: #b38754; }
+
+        a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 480px;
+    overflow: hidden;
+    max-width: 1150px; margin: 40px auto; padding: 0 20px;
+}
+li{
+   float: left;
+   font-size: 20px;
+}
+li a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>DineLUXe — Breakfast Menu</h1><br></header>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Lunch.html">Lunch Menu</a></li>
+    <li><a href="dinner.html">Dinner Menu</a></li>
+    <li><a href="index.html">Back</a></li>
+    </ul>
+
+
+<div class="container">
+
+    <!-- CATEGORY -->
+    <div class="section-title">Classic Breakfast</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="English Breakfast.png" />
+            <h3>English Breakfast</h3>
+            <p class="desc">Eggs, sausages, baked beans, potato hash, toasted sourdough.</p>
+            <div class="price">₹499</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Pancake Stack.png" />
+            <h3>Pancake Stack</h3>
+            <p class="desc">Fluffy pancakes with maple syrup and fresh berries.</p>
+            <div class="price">₹349</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Omelette Deluxe.png" />
+            <h3>Omelette Deluxe</h3>
+            <p class="desc">Three-egg omelette loaded with cheese, herbs, and premium veggies.</p>
+            <div class="price">₹299</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+
+    <!-- CATEGORY -->
+    <div class="section-title" style="margin-top:50px;">Healthy Options</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Avocado Toast.png" />
+            <h3>Avocado Toast</h3>
+            <p class="desc">Sourdough topped with smashed avocado, lemon, and microgreens.</p>
+            <div class="price">₹329</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Greek Yogurt Bowl.png" />
+            <h3>Greek Yogurt Bowl</h3>
+            <p class="desc">Honey yogurt, granola, nuts, seasonal fruits.</p>
+            <div class="price">₹279</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Oatmeal & Berries.png" />
+            <h3>Oatmeal & Berries</h3>
+            <p class="desc">Warm oatmeal with fresh berries & almond topping.</p>
+            <div class="price">₹249</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+
+    <!-- CATEGORY -->
+    <div class="section-title" style="margin-top:50px;">Sandwiches & Quick Bites</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Breakfast Sandwich.png" />
+            <h3>Breakfast Sandwich</h3>
+            <p class="desc">Egg, cheese, tomato & greens on toasted brioche.</p>
+            <div class="price">₹299</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Chicken Club.png" />
+            <h3>Chicken Club</h3>
+            <p class="desc">Grilled chicken, lettuce, tomato, mayo — crisp & satisfying.</p>
+            <div class="price">₹349</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Fruit Bowl.png" />
+            <h3>Fruit Bowl</h3>
+            <p class="desc">Fresh-cut seasonal fruit — chilled and hydrating.</p>
+            <div class="price">₹199</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+
+    <!-- CATEGORY -->
+    <div class="section-title" style="margin-top:50px;">Beverages</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Hot Coffee.png" />
+            <h3>Hot Coffee</h3>
+            <p class="desc">Freshly brewed — strong & smooth.</p>
+            <div class="price">₹149</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Fresh Juice.png" />
+            <h3>Fresh Juice</h3>
+            <p class="desc">Choose from orange, pineapple, watermelon, or mixed.</p>
+            <div class="price">₹179</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Signature Smoothie.png" />
+            <h3>Signature Smoothie</h3>
+            <p class="desc">Banana, oats, honey, chia — energy booster.</p>
+            <div class="price">₹199</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

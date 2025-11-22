@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DineLUXe — Order Online</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #fffaf5;
+        color: #222;
+    }
+    header {
+        padding: 25px;
+        text-align: center;
+        background: #ffffff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    header h1 { margin: 0; font-size: 28px; font-weight: 700; }
+    .container { max-width: 1150px; margin: 40px auto; padding: 0 20px; }
+
+    /* Menu Grid */
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+    .item-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 15px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        transition: 0.2s;
+    }
+    .item-card:hover {
+        transform: translateY(-3px);
+    }
+    .item-card img {
+        width: 100%;
+        border-radius: 14px;
+        margin-bottom: 12px;
+    }
+    .item-card h3 { margin: 8px 0 5px; font-size: 18px; }
+    .item-card p { margin: 0; color: #777; font-size: 14px; }
+    .price { font-size: 18px; font-weight: 700; margin: 10px 0; }
+    .btn-add {
+        padding: 10px 18px;
+        border: none;
+        background: #c79a63;
+        color: #fff;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    /* Cart Sidebar */
+    #cart {
+        position: fixed;
+        top: 0;
+        right: -360px;
+        width: 360px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.15);
+        padding: 25px;
+        transition: 0.3s;
+        z-index: 100;
+        overflow-y: auto;
+    }
+    #cart.open { right: 0; }
+    #cart h2 { margin-top: 0; }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eee;
+    }
+    .cart-total {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .checkout-btn {
+        display: block;
+        margin-top: 20px;
+        padding: 14px;
+        background: #222;
+        color: #fff;
+        text-align: center;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    /* Cart Button */
+    #openCartBtn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background: #c79a63;
+        color: #fff;
+        padding: 16px 25px;
+        border-radius: 40px;
+        cursor: pointer;
+        font-weight: 600;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        z-index: 100;
+    }
+
+    a{
+    text-decoration: none;
+    }
+    ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 480px;
+    overflow: hidden;
+    max-width: 1150px; margin: 40px auto; padding: 0 20px;
+}
+li{
+   float: left;
+   font-size: 20px;
+}
+li a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>DineLUXe — Order Online</h1><br></header>
+        <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Breakfast.html">Menu</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html">Back</a></li>
+    </ul>
+
+
+
+
+<div class="container">
+
+    <h2 style="font-size:26px; margin-bottom:20px;">Popular Dishes</h2>
+
+    <div class="menu-grid">
+
+        <!-- ITEM 1 -->
+        <div class="item-card">
+            <img src="gilledsteak.png" alt="">
+            <h3>Grilled Steak</h3>
+            <p>Perfect sear, rich flavour.</p>
+            <div class="price">₹899</div>
+            <button class="btn-add" onclick="addToCart('Grilled Steak', 899)">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="item-card">
+            <img src="pasta.png" alt="">
+            <h3>Truffle Pasta</h3>
+            <p>Silky, aromatic, chef-crafted.</p>
+            <div class="price">₹749</div>
+            <button class="btn-add" onclick="addToCart('Truffle Pasta', 749)">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="item-card">
+            <img src="burger.png" alt="">
+            <h3>Luxury Burger</h3>
+            <p>Premium beef, signature sauce.</p>
+            <div class="price">₹599</div>
+            <button class="btn-add" onclick="addToCart('Luxury Burger', 599)">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="item-card">
+            <img src="Classic Margherita.png" alt="">
+            <h3>Classic Margherita</h3>
+            <p>Fresh basil, oven-fired.</p>
+            <div class="price">₹499</div>
+            <button class="btn-add" onclick="addToCart('Classic Margherita', 499)">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="item-card">
+            <img src="Cheesecake.png" alt="">
+            <h3>Cheesecake</h3>
+            <p>Creamy, smooth, perfection.</p>
+            <div class="price">₹349</div>
+            <button class="btn-add" onclick="addToCart('Cheesecake', 349)">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="item-card">
+            <img src="Mango Cooler.png" alt="">
+            <h3>Mango Cooler</h3>
+            <p>Refreshing tropical drink.</p>
+            <div class="price">₹199</div>
+            <button class="btn-add" onclick="addToCart('Mango Cooler', 199)">Add to Cart</button>
+        </div>
+
+         <!-- ITEM 7 -->
+        <div class="item-card">
+            <img src="platter.png" alt="">
+            <h3>Platter</h3>
+            <p>Best Bombo.</p>
+            <div class="price">₹699</div>
+            <button class="btn-add" onclick="addToCart('Mango Cooler', 199)">Add to Cart</button>
+        </div>
+
+         <!-- ITEM 8 -->
+        <div class="item-card">
+            <img src="icecream.png" alt="">
+            <h3>icecreams</h3>
+            <p>Refreshing icecream.</p>
+            <div class="price">₹199</div>
+            <button class="btn-add" onclick="addToCart('Mango Cooler', 199)">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+let cart = [];
+
+function toggleCart() {
+    document.getElementById("cart").classList.toggle("open");
+}
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+}
+
+function updateCart() {
+    let cartItemsDiv = document.getElementById("cartItems");
+    cartItemsDiv.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        total += item.price;
+        cartItemsDiv.innerHTML += `
+            <div class="cart-item">
+                <span>${item.name}</span>
+                <span>₹${item.price}</span>
+            </div>
+        `;
+    });
+
+    document.getElementById("cartTotal").innerText = total;
+}
+</script>
+
+</body>
+</html>

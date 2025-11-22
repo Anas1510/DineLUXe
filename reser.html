@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Breakfast.html">Menu</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html">Back</a></li>
+</ul>  
+
+    <section id="reservation" style="background-color:#fffaf5; padding:90px 0; font-family:'Poppins', sans-serif;">
+  <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:50px;">
+
+    <!-- Text Side -->
+    <div style="flex:1 1 450px;">
+      <h2 style="font-size:36px; font-weight:700; color:#2c2c2c; margin-bottom:15px;">Book a Table</h2>
+      <p style="font-size:16px; color:#666; margin-bottom:25px; line-height:1.6;">
+        Experience fine dining at <strong>DineLUXe</strong> — reserve your table and let us craft an unforgettable evening for you.  
+        Whether it’s a romantic dinner, family gathering, or corporate event, our team ensures every detail is perfect.
+      </p>
+      <ul style="list-style:none; padding:0; color:#444; font-size:15px;">
+        <li style="margin-bottom:10px;">✔ Online & phone reservations available</li>
+        <li style="margin-bottom:10px;">✔ Private dining rooms on request</li>
+        <li style="margin-bottom:10px;">✔ Special menu options for groups</li>
+      </ul>
+    </div>
+
+    <!-- Form Side -->
+    <div style="flex:1 1 450px; background-color:#fff; padding:40px; border-radius:20px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
+      <form action="#" method="post">
+        <h3 style="font-size:22px; color:#2c2c2c; margin-bottom:20px;">Reserve Your Table</h3>
+        
+        <div style="display:flex; flex-direction:column; gap:15px;">
+          <input type="text" name="name" placeholder="Full Name" required 
+                 style="padding:14px; border:1px solid #ddd; border-radius:8px; font-size:15px;">
+          
+          <input type="email" name="email" placeholder="Email Address" required 
+                 style="padding:14px; border:1px solid #ddd; border-radius:8px; font-size:15px;">
+          
+          <input type="tel" name="phone" placeholder="Phone Number" required 
+                 style="padding:14px; border:1px solid #ddd; border-radius:8px; font-size:15px;">
+          
+          <div style="display:flex; gap:10px;">
+            <input type="date" name="date" required 
+                   style="flex:1; padding:14px; border:1px solid #ddd; border-radius:8px; font-size:15px;">
+            <input type="time" name="time" required 
+                   style="flex:1; padding:14px; border:1px solid #ddd; border-radius:8px; font-size:15px;">
+          </div>
+
+          <select name="guests" required 
+                  style="padding:14px; border:1px solid #ddd; border-radius:8px; font-size:15px;">
+            <option value="">Number of Guests</option>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3 People</option>
+            <option>4 People</option>
+            <option>5+ People</option>
+          </select>
+
+          <textarea name="message" rows="3" placeholder="Special requests (optional)"
+                    style="padding:14px; border:1px solid #ddd; border-radius:8px; font-size:15px; resize:none;"></textarea>
+          
+       <button type="submit" 
+                  style="background-color:#c79a63; color:#fff; border:none; padding:14px; border-radius:30px; font-size:16px; font-weight:600; cursor:pointer; transition:0.3s;">
+               Book Now 
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</body>
+</html>

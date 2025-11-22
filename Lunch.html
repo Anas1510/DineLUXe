@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DineLUXe — Lunch Menu</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #fffaf5;
+        color: #222;
+    }
+    header {
+        text-align: center;
+        padding: 25px;
+        background: #036579;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        color: gold;
+    }
+    header h1 { margin: 0; font-size: 32px; font-weight: 700; }
+
+    .container { max-width: 1150px; margin: 40px auto; padding: 0 20px; }
+
+    .section-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        border-left: 5px solid #c79a63;
+        padding-left: 12px;
+    }
+
+    /* Grid */
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+
+    /* Cards */
+    .item-card {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 18px;
+        transition: 0.2s;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .item-card:hover { transform: translateY(-4px); }
+
+    .item-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 14px;
+        margin-bottom: 15px;
+    }
+
+    .item-card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 700; }
+    .desc { margin: 0 0 10px; color: #777; font-size: 14px; line-height: 1.5; }
+    .price { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+
+    .btn-order {
+        background: #c79a63;
+        color: #fff;
+        border: none;
+        width: 100%;
+        padding: 12px;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .btn-order:hover { background: #b38754; }
+            a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 480px;
+    overflow: hidden;
+    max-width: 1150px; margin: 40px auto; padding: 0 20px;
+}
+li{
+   float: left;
+   font-size: 20px;
+}
+li a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>DineLUXe — Lunch Menu</h1><br></header>
+      <ul>
+    <li><a href="index.html">Home</a></li>>
+    <li><a href="Breakfast.html">BreakFast Menu</a></li>
+    <li><a href="dinner.html">Dinner Menu</a></li>
+    <li><a href="Breakfast.html">Back</a></li>
+    </ul>
+
+
+<div class="container">
+
+    <!-- CATEGORY -->
+    <div class="section-title">Signature Starters</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Garlic Butter Shrimp.png" />
+            <h3>Garlic Butter Shrimp</h3>
+            <p class="desc">Sautéed in herbs, garlic, and premium butter blend.</p>
+            <div class="price">₹499</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Chicken Caesar Bites,png" />
+            <h3>Chicken Caesar Bites</h3>
+            <p class="desc">Grilled chicken tossed with crisp romaine & parmesan.</p>
+            <div class="price">₹449</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Crispy Avocado Fries.png" />
+            <h3>Crispy Avocado Fries</h3>
+            <p class="desc">Golden, crunchy veggie starter — lightly seasoned.</p>
+            <div class="price">₹379</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="section-title" style="margin-top:50px;">Main Course</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Grilled Chicken Plate.png" />
+            <h3>Grilled Chicken Plate</h3>
+            <p class="desc">Served with mashed potatoes, veggies & herb jus.</p>
+            <div class="price">₹699</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Butter Garlic Salmon.png" />
+            <h3>Butter Garlic Salmon</h3>
+            <p class="desc">Pan-seared salmon with buttery garlic glaze.</p>
+            <div class="price">₹899</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Veg Herb Pasta.png" />
+            <h3>Veg Herb Pasta</h3>
+            <p class="desc">Slow-cooked tomato base with fresh herbs & parmesan.</p>
+            <div class="price">₹549</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="section-title" style="margin-top:50px;">Premium Lunch Bowls</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Protein Power Bowl.png" />
+            <h3>Protein Power Bowl</h3>
+            <p class="desc">Grilled chicken, quinoa, veggies, seeds, house dressing.</p>
+            <div class="price">₹599</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Mediterranean Veg Bowl.png" />
+            <h3>Mediterranean Veg Bowl</h3>
+            <p class="desc">Olives, hummus, greens, couscous & tahini sauce.</p>
+            <div class="price">₹549</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="teak Rice Bowl.png" />
+            <h3>Steak Rice Bowl</h3>
+            <p class="desc">Medium-grilled steak on herbed rice with sesame greens.</p>
+            <div class="price">₹749</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="section-title" style="margin-top:50px;">Breads & Sides</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Garlic Bread.png" />
+            <h3>Garlic Bread</h3>
+            <p class="desc">Crispy, buttery, oven-fresh.</p>
+            <div class="price">₹179</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="French Fries.png" />
+            <h3>French Fries</h3>
+            <p class="desc">Perfectly crisp, lightly seasoned.</p>
+            <div class="price">₹159</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="House Salad.png" />
+            <h3>House Salad</h3>
+            <p class="desc">Fresh greens with vinaigrette dressing.</p>
+            <div class="price">₹199</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="section-title" style="margin-top:50px;">Beverages</div>
+
+    <div class="menu-grid">
+
+        <div class="item-card">
+            <img src="Iced Coffee.png" />
+            <h3>Iced Coffee</h3>
+            <p class="desc">Smooth, cold-brewed, refreshing.</p>
+            <div class="price">₹159</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Fresh Juice.png" />
+            <h3>Fresh Juice</h3>
+            <p class="desc">Orange, pineapple, watermelon or mixed.</p>
+            <div class="price">₹179</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+        <div class="item-card">
+            <img src="Signature Cooler.png" />
+            <h3>Signature Cooler</h3>
+            <p class="desc">Mint, lime, soda — chilled & energizing.</p>
+            <div class="price">₹149</div>
+            <button class="btn-order">Order</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
